@@ -1,0 +1,568 @@
+/* 폰트 적용 */
+.trochut-bold {
+  font-family: "Trochut", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "NanumSquare", sans-serif;
+  color: #1d1d1f;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*-------------- 커스텀 --------------*/
+
+/*-------------- 1.포폴 표지 시작 --------------*/
+/*-------------- 헤더 시작 --------------*/
+.page-section {
+  position: relative;
+  width: 1920px;
+  margin: 0 auto;
+  height: 950px;
+  padding: 0 160px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/*-------------- 배경 이미지는 가상요소로 --------------*/
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.cover-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+/*-------------- 내부 여백 컨테이너 --------------*/
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 160px;
+  box-sizing: border-box;
+}
+
+/*-------------- 라벨 이미지 --------------*/
+.cover-label {
+  position: absolute;
+  top: 0;
+  right: 160px;
+}
+.cover-label img {
+  width: 50px;
+  height: 273px;
+}
+
+/*-------------- 하단 텍스트 --------------*/
+.center-text {
+  position: absolute;
+  bottom: 5%;
+  color: #8ca480;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.center-text {
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*-------------- 1.포폴 표지 끝 --------------*/
+/*-------------- 헤더 끝 --------------*/
+
+/*------------- 2. 프로필 페이지 시작 -------------*/
+.second {
+  position: relative;
+  width: 1920px;
+  height: 950px;
+  background: #fff;
+  padding: 0 160px;
+  box-sizing: border-box;
+}
+
+.second .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 프로필 이미지 */
+.profile-img {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  width: 317px;
+  height: 407px;
+  object-fit: cover;
+}
+
+/* 프로필 텍스트 */
+.profile-info {
+  position: absolute;
+  top: calc(151px + 407px + 59px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-row {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.profile-info p {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.birth {
+  margin-top: 4px;
+}
+
+.label,
+.value {
+  margin: 0;
+}
+
+.name-en,
+.birth,
+.value {
+  font-size: 18px;
+}
+
+.name-en {
+  font-weight: 100;
+}
+
+.birth,
+.label,
+.value {
+  font-weight: 300;
+}
+
+.name-kr,
+.label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 학력 */
+.edu-section {
+  position: absolute;
+  top: 169px;
+  left: 495px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.edu-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.edu-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.edu-date {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  width: 90px;
+}
+
+.edu-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edu-bold {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 경력 */
+.career-section {
+  position: absolute;
+  top: 435px;
+  left: 495px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.career-title {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.career-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.career-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.career-date {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  width: 170px;
+}
+
+.career-bold {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.career-liner {
+  position: absolute;
+  top: calc(47% + 69px);
+  left: 420px;
+  width: 1182px;
+  height: 0.5px;
+  background: #686868;
+}
+
+/* 자격증 */
+.license-section {
+  position: absolute;
+  top: 605px;
+  left: 495px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.license-title {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+  min-width: 80px;
+}
+
+.license-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.license-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.license-date {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  width: 105px;
+}
+
+.license-bold {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 보유역량 */
+.skill-section {
+  position: absolute;
+  top: 775px;
+  left: 495px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.skill-title {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+  min-width: 80px;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skill-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.figma-icon,
+.ps-icon,
+.ai-icon {
+  width: 37px;
+  height: 37px;
+  margin-right: 20px;
+}
+
+.skill-liner {
+  position: absolute;
+  top: 890px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1600px;
+  height: 0.5px;
+  background: #d0d7c6;
+}
+/*------------- 2. 프로필 페이지 끝 -------------*/
+
+/*-------------- 3. 프로젝트 페이지시작 --------------*/
+.project-section {
+  position: relative;
+  width: 1920px;
+  margin: 0 auto;
+  padding: 0 160px;
+  box-sizing: border-box;
+  height: auto;
+  padding-bottom: 140px;
+}
+
+/* PROJECT 제목 */
+.title {
+  font-size: 120px;
+  font-weight: 300;
+  margin-top: 180px;
+  margin-bottom: 160px;
+}
+
+/* PROJECT 제목 아래 라인 */
+.project-liner {
+  position: absolute;
+  top: 235px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1600px;
+  height: 0.5px;
+  background: #686868;
+}
+
+/* Branding / Web Redesign 묶음 한 덩어리 */
+.project-group {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  column-gap: 230px;
+  align-items: flex-start;
+}
+
+/* 왼쪽 큰 제목 (Branding, Web Redesign) */
+.group-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 오른쪽 전체 내용 래퍼 */
+.group-content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* 한 줄: 텍스트 + 이미지 */
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* 텍스트 */
+.project-text {
+  max-width: 500px;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 22px 0;
+}
+
+.project-name {
+  font-weight: 700;
+}
+
+.project-type {
+  font-size: 20px;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+/* 오른쪽 이미지 */
+.project-thumb {
+  position: relative;
+  display: block;
+  width: 589px;
+  height: 331px;
+  overflow: hidden;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 호버 오버레이 */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-thumb:hover .project-overlay {
+  opacity: 1;
+}
+
+/* 중간/하단 라인 */
+.branding-liner,
+.wd-liner {
+  position: relative;
+  margin-top: 80px;
+  width: 1600px;
+  height: 0.5px;
+  background: #686868;
+}
+
+.wd-liner {
+  margin-top: 100px;
+}
+/*------------- 3. 프로젝트 페이지 끝 -------------*/
+
+/*---------- 4. 마지막 페이지 시작 ----------*/
+.last {
+  position: relative;
+  width: 1920px;
+  height: 550px;
+  margin: 0 auto;
+  padding: 0 160px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 배경 이미지 */
+.last-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+/* 내부 컨테이너 */
+.last .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 내부 컨테이너 */
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 상단 텍스트 */
+.last-left-text,
+.last-right-text,
+.last-center-text {
+  position: absolute;
+  bottom: 7%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.last-left-text {
+  left: 0;
+}
+
+.last-right-text {
+  right: 0;
+}
+
+.last-center-text {
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*------------- 4. 마지막 페이지 끝 -------------*/
