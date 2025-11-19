@@ -296,6 +296,10 @@ header::before {
   align-items: flex-start;
 }
 
+.project-item .meta {
+  margin-top: 70px; /* 숫자 조절해서 더 내릴 수 있음 */
+}
+
 /* 썸네일 공통 */
 .thumb {
   position: relative;
