@@ -310,25 +310,6 @@ header::before {
   object-fit: cover;
 }
 
-/* 호버 오버레이 */
-.thumb-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 28px;
-  font-weight: 500;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.thumb:hover .thumb-overlay {
-  opacity: 1;
-}
-
 /* 오른쪽 텍스트 영역 */
 .project-info {
   flex: 1;
