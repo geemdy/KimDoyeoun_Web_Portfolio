@@ -95,431 +95,223 @@ header::before {
 
 /*------------- 2. 프로필 페이지 시작 -------------*/
 .second {
-  position: relative;
-  width: 1920px;
-  height: 950px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 141px auto 0;
   background: #fff;
-  padding: 0 160px;
   box-sizing: border-box;
 }
 
 .second .inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  padding: 0 154px;
+}
+
+.profile-top {
+  transform: translateY(-5px);
 }
 
 /* 프로필 이미지 */
 .profile-img {
-  position: absolute;
-  top: 160px;
-  left: 0;
   width: 317px;
   height: 407px;
   object-fit: cover;
+  flex-shrink: 0;
+  margin-bottom: 100px;
 }
 
-/* 프로필 텍스트 */
-.profile-info {
-  position: absolute;
-  top: calc(151px + 407px + 59px);
-  left: 0;
+/* PROFILE 텍스트 묶음 */
+.profile-text-block {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 28px;
+  margin-top: -80px;
 }
 
-.info-block {
-  display: flex;
-  flex-direction: column;
+.profile-title {
+  font-family: "Trochut", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-.info-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.profile-name-en {
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 10px;
+  font-family: "NanumSquare", sans-serif;
 }
 
-.info-row {
-  display: flex;
-  gap: 23px;
+.profile-name-en-2 {
+  font-size: 16px;
+  font-weight: 200;
+  font-family: "NanumSquare", sans-serif;
+}
+
+/* DATA · PHONE · EMAIL */
+.info-grid {
+  display: grid;
+  grid-template-columns: 90px 200px 90px 1fr;
+  row-gap: 13px;
+  column-gap: 10px;
   align-items: center;
+  margin: 0;
 }
 
-.profile-info p {
+/* 폰트 스타일 유지 */
+.info-label {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.info-value {
+  font-weight: 200;
+  margin-left: -30px;
+}
+
+.info-label,
+.info-value {
   margin: 0;
   line-height: 1.3;
 }
 
-.birth {
-  margin-top: 4px;
-}
-
-.label,
-.value {
-  margin: 0;
-}
-
-.name-en,
-.birth,
-.value {
-  font-size: 18px;
-}
-
-.name-en {
-  font-weight: 100;
-}
-
-.birth,
-.label,
-.value {
-  font-weight: 300;
-}
-
-.name-kr,
-.label {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-/* 학력 */
-.edu-section {
-  position: absolute;
-  top: 169px;
-  left: 495px;
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.edu-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.edu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
-.edu-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.edu-date {
-  font-size: 18px;
-  font-weight: 300;
-  margin: 0;
-  width: 90px;
-}
-
-.edu-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.edu-bold {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* 교육사항 */
-.edu2-section {
-  position: absolute;
-  top: 335px; /* 🔥 위치는 숫자만 조금씩 바꿔서 맞춰봐 */
-  left: 495px;
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.edu2-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.edu2-list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
-.edu2-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.edu2-date {
-  font-size: 18px;
-  font-weight: 300;
-  margin: 0;
-  width: 170px; /* 날짜 폭 – 경력이랑 비슷하게 */
-}
-
-.edu2-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.edu2-bold {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* 경력 */
-.career-section {
-  position: absolute;
-  top: 480px;
-  left: 495px;
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.career-title {
-  font-size: 20px;
-  font-weight: 600;
-  white-space: nowrap;
-  margin: 0;
-}
-
-.career-list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
-.career-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.career-date {
-  font-size: 18px;
-  font-weight: 300;
-  margin: 0;
-  width: 170px;
-}
-
-.career-bold {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.career-liner {
-  position: absolute;
-  top: calc(47% + 69px);
-  left: 420px;
-  width: 1182px;
-  height: 0.5px;
-  background: #686868;
-}
-
-/* 자격증 */
-.license-section {
-  position: absolute;
-  top: 650px;
-  left: 495px;
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.license-title {
-  font-size: 20px;
-  font-weight: 600;
-  white-space: nowrap;
-  margin: 0;
-  min-width: 80px;
-}
-
-.license-list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
-.license-row {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.license-date {
-  font-size: 18px;
-  font-weight: 300;
-  margin: 0;
-  width: 105px;
-}
-
-.license-bold {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-}
-
 /* 보유역량 */
 .skill-section {
-  position: absolute;
-  top: 775px;
-  left: 495px;
   display: flex;
-  gap: 60px;
-  align-items: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-top: 0;
+  flex-shrink: 0;
 }
 
 .skill-title {
   font-size: 20px;
   font-weight: 600;
   white-space: nowrap;
-  margin: 0;
-  min-width: 80px;
 }
 
-.skill-list {
+.skill-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .skill-row {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  gap: 3px;
 }
 
-.figma-icon,
-.ps-icon,
-.ai-icon {
-  width: 37px;
-  height: 37px;
-  margin-right: 20px;
+.skill-row img {
+  width: 28px;
+  height: 27px;
+  margin-right: 14px;
 }
 
-.skill-liner {
-  position: absolute;
-  top: 890px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1600px;
-  height: 0.5px;
-  background: #d0d7c6;
+/* UIUX DESIGNER 텍스트 */
+.job-title {
+  font-size: 58px;
+  font-weight: 400;
+  color: #efefef;
+  white-space: nowrap;
+  margin-left: 235px;
+  font-family: "Trochut", sans-serif;
 }
+
+/* 학력 / 교육 / 경력 / 자격증 */
+.profile-top {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+}
+
+/* 하단 학력/경력/교육/자격증 */
+.profile-bottom {
+  display: grid;
+  grid-template-columns: 140px 180px 1fr 140px 180px 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-top: -20px;
+}
+
+.section-label {
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.section-date {
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 2.2;
+  white-space: nowrap;
+  margin-left: -30px;
+  color: #a4a4a4;
+}
+
+.section-desc {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2.2;
+  white-space: nowrap;
+}
+
 /*------------- 2. 프로필 페이지 끝 -------------*/
 
-/*-------------- 3. 프로젝트 페이지시작 --------------*/
+/*-------------- 3. PROJECT 페이지 시작 --------------*/
 .project-section {
-  position: relative;
-  width: 1920px;
+  width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 160px;
+  padding: 0 361px 164px;
   box-sizing: border-box;
-  height: auto;
-  padding-bottom: 140px;
 }
 
-/* PROJECT 제목 */
 .title {
   font-size: 120px;
   font-weight: 300;
-  margin-top: 180px;
-  margin-bottom: 160px;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-/* PROJECT 제목 아래 라인 */
 .project-liner {
-  position: absolute;
-  top: 235px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1600px;
-  height: 0.5px;
-  background: #686868;
+  width: 100%;
+  height: 1px;
+  background: #d4d4d4;
+  margin-bottom: 80px;
 }
 
-/* Branding / Web Redesign 묶음 한 덩어리 */
-.project-group {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  column-gap: 230px;
-  align-items: flex-start;
-}
-
-/* 왼쪽 큰 제목 (Branding, Web Redesign) */
-.group-title {
-  font-size: 32px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* 오른쪽 전체 내용 래퍼 */
-.group-content {
+/* 리스트 전체 */
+.project-list {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 120px;
 }
 
-/* 한 줄: 텍스트 + 이미지 */
+/* 각 프로젝트 한 줄 */
 .project-item {
   display: flex;
+  gap: 60px;
   align-items: flex-start;
-  justify-content: space-between;
 }
 
-/* 텍스트 */
-.project-text {
-  max-width: 500px;
-}
-
-.project-title {
-  font-size: 24px;
-  font-weight: 400;
-  margin: 0 0 22px 0;
-}
-
-.project-name {
-  font-weight: 700;
-}
-
-.project-type {
-  font-size: 20px;
-  color: #b3b3b3;
-  margin: 0;
-}
-
-/* 오른쪽 이미지 */
-.project-thumb {
+/* 썸네일 공통 */
+.thumb {
   position: relative;
-  display: block;
   width: 589px;
   height: 331px;
+  display: block;
   overflow: hidden;
 }
 
-.project-thumb img {
+.thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* 호버 오버레이 */
-.project-overlay {
+.thumb-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
@@ -533,24 +325,103 @@ header::before {
   transition: opacity 0.3s ease;
 }
 
-.project-thumb:hover .project-overlay {
+.thumb:hover .thumb-overlay {
   opacity: 1;
 }
 
-/* 중간/하단 라인 */
-.branding-liner,
-.wd-liner {
-  position: relative;
-  margin-top: 80px;
-  width: 1600px;
-  height: 0.5px;
-  background: #686868;
+/* 오른쪽 텍스트 영역 */
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.wd-liner {
-  margin-top: 100px;
+/* 카테고리 */
+.category {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 12px;
 }
-/*------------- 3. 프로젝트 페이지 끝 -------------*/
+
+/* 타이틀 */
+.title-text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.title-text a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title-text a:hover {
+  text-decoration: underline; /* 필요하면 */
+}
+
+.title-text span {
+  font-weight: 700;
+}
+
+/* 설명 */
+.desc {
+  font-size: 15px;
+  color: #8f8f8f;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* 탭 전체 */
+.meta {
+  margin-top: 24px;
+  text-align: right;
+}
+
+/* 탭 버튼 영역 */
+.meta-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-tab {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  color: #8f8f8f;
+}
+
+.meta-tab.active {
+  color: #1d1d1f;
+  font-weight: 800;
+}
+
+.meta-divider {
+  color: #8f8f8f;
+}
+
+/* 탭 내용 */
+.meta-panels {
+  margin-top: 10px;
+}
+
+.meta-panel {
+  display: none;
+  color: #8f8f8f;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.meta-panel.active {
+  display: block;
+}
+
+/*-------------- 3. PROJECT 페이지 끝 --------------*/
 
 /*---------- 4. 마지막 페이지 시작 ----------*/
 .last {
@@ -588,6 +459,7 @@ header::before {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 0;
   box-sizing: border-box;
 }
 
