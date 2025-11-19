@@ -229,7 +229,7 @@ header::before {
   display: grid;
   grid-template-columns: 140px 180px 1fr 140px 180px 1fr;
   column-gap: 10px;
-  row-gap: 22px; /* 조금 넓혀주면 가독성 좋아짐 */
+  row-gap: 22px;
   align-items: start;
 }
 
@@ -243,7 +243,7 @@ header::before {
 .section-date {
   font-size: 18px;
   font-weight: 100;
-  line-height: 2.4; /* 🔥 줄 높이 낮춰서 위치 맞추기 */
+  line-height: 2.4;
   white-space: nowrap;
   margin-left: -30px;
   color: #a4a4a4;
@@ -252,7 +252,7 @@ header::before {
 .section-desc {
   font-size: 18px;
   font-weight: 600;
-  line-height: 2.4; /* 🔥 동일한 줄 간격 */
+  line-height: 2.4;
   white-space: nowrap;
 }
 
@@ -297,7 +297,7 @@ header::before {
 }
 
 .project-item .meta {
-  margin-top: 70px; /* 숫자 조절해서 더 내릴 수 있음 */
+  margin-top: 70px;
 }
 
 /* 썸네일 공통 */
@@ -343,7 +343,7 @@ header::before {
 }
 
 .title-text a:hover {
-  text-decoration: underline; /* 필요하면 */
+  text-decoration: underline;
 }
 
 .title-text span {
@@ -358,53 +358,36 @@ header::before {
   margin: 0;
 }
 
-/* 탭 전체 */
-.meta {
-  margin-top: 24px;
-  text-align: right;
-}
-
-/* 탭 버튼 영역 */
-.meta-top {
+.button-row {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
 }
 
-.meta-tab {
-  border: none;
-  background: none;
-  padding: 0;
-  font: inherit;
+.meta-btn {
   font-size: 14px;
+  font-weight: 700;
+  color: #1d1d1f;
+  text-decoration: none;
   cursor: pointer;
-  color: #8f8f8f;
+  transition: opacity 0.2s;
 }
 
-.meta-tab.active {
-  color: #1d1d1f;
-  font-weight: 800;
+.meta-btn:hover {
+  opacity: 0.6;
 }
 
 .meta-divider {
-  color: #8f8f8f;
+  color: #1d1d1f;
+  font-weight: 700;
 }
 
-/* 탭 내용 */
-.meta-panels {
+.meta-fixed-text {
   margin-top: 10px;
-}
-
-.meta-panel {
-  display: none;
-  color: #8f8f8f;
   font-size: 14px;
-  white-space: nowrap;
-}
-
-.meta-panel.active {
-  display: block;
+  color: #8f8f8f;
+  text-align: right;
 }
 
 /*-------------- 3. PROJECT 페이지 끝 --------------*/
