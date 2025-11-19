@@ -237,12 +237,13 @@ header::before {
   font-size: 20px;
   font-weight: 700;
   white-space: nowrap;
+  line-height: 1.9;
 }
 
 .section-date {
   font-size: 18px;
   font-weight: 100;
-  line-height: 1.4; /* 🔥 줄 높이 낮춰서 위치 맞추기 */
+  line-height: 2.4; /* 🔥 줄 높이 낮춰서 위치 맞추기 */
   white-space: nowrap;
   margin-left: -30px;
   color: #a4a4a4;
@@ -251,7 +252,7 @@ header::before {
 .section-desc {
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.4; /* 🔥 동일한 줄 간격 */
+  line-height: 2.4; /* 🔥 동일한 줄 간격 */
   white-space: nowrap;
 }
 
