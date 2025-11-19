@@ -229,8 +229,8 @@ header::before {
   display: grid;
   grid-template-columns: 140px 180px 1fr 140px 180px 1fr;
   column-gap: 10px;
-  row-gap: 10px;
-  margin-top: -20px;
+  row-gap: 22px; /* 조금 넓혀주면 가독성 좋아짐 */
+  align-items: start;
 }
 
 .section-label {
@@ -242,7 +242,7 @@ header::before {
 .section-date {
   font-size: 18px;
   font-weight: 100;
-  line-height: 2.2;
+  line-height: 1.4; /* 🔥 줄 높이 낮춰서 위치 맞추기 */
   white-space: nowrap;
   margin-left: -30px;
   color: #a4a4a4;
@@ -251,7 +251,7 @@ header::before {
 .section-desc {
   font-size: 18px;
   font-weight: 600;
-  line-height: 2.2;
+  line-height: 1.4; /* 🔥 동일한 줄 간격 */
   white-space: nowrap;
 }
 
